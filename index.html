@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biryani</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(248, 219, 219) 0%,
+          rgb(229, 248, 250) 90%
+        );
+      }
+
+      div {
+        max-width: 700px;
+        display: block;
+        margin: 40px auto;
+        border: none;
+        border-radius: 30px;
+        padding: 20px 30px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+        text-align: center;
+        color: #ff007b;
+        font-size: 50px;
+        font-family: cursive;
+        margin: 0px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #f83e4b;
+        border: 1px solid lightpink;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: lighter;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 30px;
+      }
+
+      img:hover {
+        width: 400px;
+      }
+
+      hr {
+        color: red;
+      }
+
+      a {
+        color: #085f63;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #8aacff;
+        color: white;
+        border: none;
+        font-size: 30px;
+        padding: 10px 30px;
+        border-radius: 25px;
+        transition: all 500ms ease-in-out;
+      }
+
+      button:hover {
+        color: #8aacff;
+        background: white;
+        cursor: pointer;
+      }
+
+      .info {
+        line-height: 20px;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .developer-name {
+        text-decoration: underline;
+        font-style: italic;
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Biryani</h1>
+
+      <h2>Happiness is ... HOME-COOKED BIRYANI 🥘</h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/674/original/IMG_20200523_165954_959-scaled.jpeg?1675963344"
+        alt="picture of Biryani"
+        width="300"
+      />
+
+      <p class="info">
+        The Biryani is traditionally a rice dish with meats and spices.Biryani
+        is known for its <em>aroma and flavor.</em> Fresh herbs, saffron, and
+        basmati rice give it a sweet-floral aroma that hits the nose before you
+        taste it. Whole garam masala, fried onions, and marinated meat provide
+        warmth and subtle heat to the dish. Overall, it tastes like a savory,
+        spiced rice pilaf.One of its main features is the method of preparation
+        that is considered by many an art of <strong>Indian cuisine</strong>.
+      </p>
+
+      <a
+        href="https://www.thedeliciouscrescent.com/easy-hyderabadi-chicken-biryani/"
+        target="_blank"
+        >Recipe for Chicken Biryani</a
+      >
+
+      <button>order Biryani</button>
+
+      <hr color="white" />
+
+      <p class="footer">
+        This page is coded by <span class="developer-name">Amrutha Iyyapu</span>
+      </p>
+
+      <script>
+        function placeOrder() {
+          let userName = prompt("Enter your name");
+          let userEmail = prompt("Enter your email");
+          let biryaniType = prompt(
+            "please enter the type of birynai. Here are the options: 1.chicken 2.mutton"
+          );
+
+          if (biryaniType.toLowerCase() === "chicken") {
+            alert(
+              "Hey, " +
+                userName.toUpperCase() +
+                "! Your order of chicken biryani is placed. You will receive notification to the email provided."
+            );
+          } else {
+            if (biryaniType.toLowerCase() === "mutton") {
+              alert(
+                "Hey, " +
+                  userName.toUpperCase() +
+                  "! Your order of mutton biryani is placed. You will receive notification to the email provided."
+              );
+            } else {
+              alert(
+                "Hey, " +
+                  userName.toUpperCase() +
+                  "! Please choose valid biryani type"
+              );
+            }
+          }
+        }
+
+        let clickButton = document.querySelector("button");
+        clickButton.addEventListener("click", placeOrder);
+      </script>
+    </div>
+  </body>
+</html>
